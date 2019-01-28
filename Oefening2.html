@@ -11,7 +11,7 @@
     <textarea oninput="calculate()" name="textarea" id="textarea" cols="30" rows="10">
 Dit is echt wel tof
     </textarea>
-    <div id=""><b>aantal letters </b><span id="txtaantaLetters"></span></div>
+    <div id=""><b>aantal letters: </b><span id="txtaantaLetters"></span></div>
     <div id=""><b>aantal woorden: </b><span id="txtaantalWoorden"></span></div>
     <div><b>laatste woord: </b><span id="txtLaasteWoord"></span></div>
     <p>
@@ -39,12 +39,12 @@ Dit is echt wel tof
 
     function toLCase() {
         zin = txtArea.value;
-        txtArea.innerHTML = zin.toLowerCase();
+        txtArea.value = zin.toLowerCase();
     }
 
     function toUCase() {
         zin = txtArea.value;
-        txtArea.innerHTML = zin.toUpperCase();
+        txtArea.value = zin.toUpperCase();
     }
 
     </script>
