@@ -9,7 +9,7 @@
 <body onload="calculate()">
     <h1>String manupilation</h1>
     <textarea oninput="calculate()" name="textarea" id="textarea" cols="30" rows="10">
-Dit is echt wel tof
+
     </textarea>
     <div id=""><b>aantal letters: </b><span id="txtaantaLetters"></span></div>
     <div id=""><b>aantal woorden: </b><span id="txtaantalWoorden"></span></div>
@@ -26,7 +26,7 @@ Dit is echt wel tof
     var txtArea = document.querySelector("#textarea");
     var txtSyntraAanwezig = document.querySelector("#txtSyntraAanwezig");
     var zin;
-
+    
     function calculate() {
         zin = txtArea.value;
         var woorden = zin.split(" ");
@@ -57,6 +57,7 @@ Dit is echt wel tof
         txtArea.value = zin.toUpperCase();
     }
 
+    txtArea.value = "Dit is echt wel tof";
     </script>
 </body>
 </html>
