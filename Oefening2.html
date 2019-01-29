@@ -14,15 +14,17 @@ Dit is echt wel tof
     <div id=""><b>aantal letters: </b><span id="txtaantaLetters"></span></div>
     <div id=""><b>aantal woorden: </b><span id="txtaantalWoorden"></span></div>
     <div><b>laatste woord: </b><span id="txtLaasteWoord"></span></div>
+    <div><b>'Syntra' komt voor: </b><span id="txtSyntraAanwezig"></span></div>
     <p>
-    <button id="btnTopUppercase" onclick="toUCase()">To Uppercase</button>
-    <button id="btnToLowerCase" onclick="toLCase()">To Lowercase</button>
+    <button id="btnTopUppercase" onclick="toUCase(); calculate();">To Uppercase</button>
+    <button id="btnToLowerCase" onclick="toLCase(); calculate();">To Lowercase</button>
     </p>
     <script>
     var txtAantaLetters = document.querySelector("#txtaantaLetters");
     var txtAantalWoorden = document.querySelector("#txtaantalWoorden");
     var txtLaatsteWoord = document.querySelector("#txtLaasteWoord");
     var txtArea = document.querySelector("#textarea");
+    var txtSyntraAanwezig = document.querySelector("#txtSyntraAanwezig");
     var zin;
 
     function calculate() {
@@ -31,7 +33,15 @@ Dit is echt wel tof
         var aantalLetters = zin.length;
         var aantalWoorden =  woorden.length;
         var laatsteWoord = woorden[woorden.length -1];
+        var syntrapresent = false;
+
+        for (var i = 0; i < aantalWoorden; i++){
+            if (woorden[i].toLowerCase() == "syntra") {
+                syntrapresent = true;
+            }
+        }
         
+        txtSyntraAanwezig.innerHTML = syntrapresent;
         txtAantaLetters.innerHTML = aantalLetters;
         txtAantalWoorden.innerHTML = aantalWoorden;
         txtLaatsteWoord.innerHTML = laatsteWoord;    
