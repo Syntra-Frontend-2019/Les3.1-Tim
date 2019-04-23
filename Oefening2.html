@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oefening front end Dev: String Manipulation</title>
+    <!--<script>
+    setInterval(function(){ calculate() }, 3000);
+</script>-->
 </head>
 <body onload="calculate()">
     <h1>String Manipulation</h1>
@@ -16,8 +19,8 @@
     <div><b>laatste woord: </b><span id="txtLaasteWoord"></span></div>
     <div><b>'Syntra' komt voor: </b><span id="txtSyntraAanwezig"></span></div>
     <p>
-    <button id="btnTopUppercase" onclick="toUCase(); calculate();">To Uppercase</button>
-    <button id="btnToLowerCase" onclick="toLCase(); calculate();">To Lowercase</button>
+        <button id="btnTopUppercase" onclick="toUCase(); calculate();">To Uppercase</button>
+        <button id="btnToLowerCase" onclick="toLCase(); calculate();">To Lowercase</button>
     </p>
     <script>
     var txtAantaLetters = document.querySelector("#txtaantaLetters");
@@ -34,6 +37,7 @@
         var aantalWoorden =  woorden.length;
         var laatsteWoord = woorden[woorden.length -1];
         var syntrapresent = false;
+        console.log(woorden);
 
         for (var i = 0; i < aantalWoorden; i++){
             if (woorden[i].toLowerCase() == "syntra") {
